@@ -571,6 +571,9 @@ $(document).ready(function(){
 			closeBtn: false
 		});
 	});
+
+});
+$(window).load(function(){
 	$('.projects-block').isotope({
 		itemSelector: '.project',  
 		hiddenStyle: {
@@ -586,6 +589,6 @@ $(document).ready(function(){
 		$(this).addClass('active');
 		$('.projects-block').isotope({ filter: $(this).data('filter') })
 	})
-});
+})
 </script>
 </html>
