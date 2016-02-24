@@ -572,7 +572,13 @@ $(document).ready(function(){
 		});
 	});
 	$('.projects-block').isotope({
-		itemSelector: '.project',
+		itemSelector: '.project',  
+		hiddenStyle: {
+			opacity: 0
+		},
+		visibleStyle: {
+			opacity: 1
+		}
 	})
 	$('.nav-bar a').click(function(e){
 		e.preventDefault();
