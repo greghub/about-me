@@ -9,6 +9,7 @@
 <script type="text/javascript" src="plugins/scrollbar/jquery.scrollbar.min.js"></script>
 <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 <script type="text/javascript" src="plugins/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="plugins/isotope.pkgd.min.js"></script>
 <style type="text/css">
 body {
 	margin: 0;
@@ -383,25 +384,25 @@ table span.gle-next {
 	</div>
 	<div class="nav-bar">
 		<ul>
-			<li><a href="#" class="active">All</a></li>
-			<li><a href="#">News</a></li>
-			<li><a href="#">Images</a></li>
-			<li><a href="#">Videos</a></li>
+			<li><a href="#" class="active" data-filter="*">All</a></li>
+			<li><a href="#" data-filter=".web">Web</a></li>
+			<li><a href="#" data-filter=".app">Apps</a></li>
+			<li><a href="#" data-filter=".social">Social</a></li>
 		</ul>
 	</div>
 	<div class="results-count">About 50 projects (5 years)</div>
 	<div class="projects-block">
-		<div class="project">
+		<div class="project social">
 			<h3><a href="https://www.linkedin.com/in/gregoryhovanesyan" target="_blank">Gregory Hovanesyan | LinkedIn</a></h3>
 			<span class="link">www.linkedin.com/in/gregoryhovanesyan</span>
 			<div class="description">Creative developer at dsire, eli.am, Past: Gigit Inc, UWWWE and others</div>
 		</div>
-		<div class="project">
+		<div class="project social">
 			<h3><a href="https://github.com/greghub" target="_blank">greghub (Greg Hovanesyan) - GitHub</a></h3>
 			<span class="link">https://github.com/greghub</span>
 			<div class="description">greghub has repositories written in <b>PHP</b>, <b>JavaScript</b>, and <b>CSS</b>. Over 1600 contributions in the last year, of which only 170 are public :) Follow their code on GitHub..</div>
 		</div>
-		<div class="project">
+		<div class="project web">
 			<h3><a href="#">Gigit - Book Live Music: Better. Faster. Smarter.</a></h3>
 			<span class="link">gigit.com/</span>
 			<div class="description">Gigit is a large platform for musicians and event planners. Built on <b>Laravel</b>. Also developed an <b>API</b> for the Gigit Patrons project.</div>
@@ -418,7 +419,7 @@ table span.gle-next {
 			</div>
 			<span class="full-size"><img src="img/zoom_in.png" width="12"> Full size screenshots</span>
 		</div>
-		<div class="project">
+		<div class="project web">
 			<h3><a href="#">Patrons by Gigit app</a></h3>
 			<span class="link">patron.gigit.com/</span>
 			<div class="description">Patrons is a platform by Gigit which helps promote artists. They can trade a hotel room for an unplugged set, a $100 bar tab in exchange for a DJ set etc. Opportunities are endless. The frontend is developed using <b>React.js</b> and the backend is supported by an <b>API</b> built in <b>Laravel.</b></div>
@@ -432,22 +433,22 @@ table span.gle-next {
 			</div>
 			<span class="full-size"><img src="img/zoom_in.png" width="12"> Full size screenshot</span>
 		</div>
-		<div class="project">
+		<div class="project web">
 			<h3><a href="https://eli.am" target="_blank">eli.am - the largest online gift shop in Armenia</a></h3>
 			<span class="link">eli.am/</span>
 			<div class="description">Website is built on <b>Wordpress</b> using <b>Woocommerce</b>. I joined the team and became reponsible for the Front-end and back-end functionality as well as UX design. Completely redesigned and added functionality.</div>
 		</div>
-		<div class="project">
+		<div class="project web">
 			<h3><a href="https://dirtbikekidz.com/" target="_blank">Dirt Bike Kidz DBK Freestyle Motocross Apparel | There is ...</a></h3>
 			<span class="link">https://dirtbikekidz.com/</span>
 			<div class="description">Dirt Bike Kidz DBK is more than a Freestyle Motocross brand, it is a lifestyle that can inspire everyone to live their dream. Built on <b>Wordpress + Woocommerce</b>, updated to the WC2.1. Website had sales of $5000 on the first night</div>
 		</div>
-		<div class="project">
+		<div class="project web">
 			<h3><a href="http://candacecourter.com/map-search/" target="_blank">Candace Courter Map Search Tool</a></h3>
 			<span class="link">http://candacecourter.com/map-search/</span>
 			<div class="description">Written in <b>CodeIgniter</b> and integrated into <b>Wordpress</b>, this is a helpful tool for finding the real estate in your area. Using the toolbox, draw an area on the map <b>(google Maps v3)</b> where you want to perform search, select schools, barc, hospitals etc in that area as well.</div>
 		</div>
-		<div class="project">
+		<div class="project app">
 			<h3><a href="#" target="_blank">Springer - Guidelines App</a></h3>
 			<div class="description">Guidelines is an app for medical students to prepare for tests. It has 20 chapters and about 500 topics for reading. The app categories es the articles. Build on <b>Ionic</b> is supported on <b>iPhone</b> and <b>iPad.</b></div>
 			<div class="screenshots screenshots-app scrollbar-macosx">
@@ -462,7 +463,7 @@ table span.gle-next {
 				</div>
 			</div>
 		</div>
-		<div class="project">
+		<div class="project app">
 			<h3><a href="#" target="_blank">Springer - Exam App</a></h3>
 			<div class="description">Exam is an app for medical students to take test, see progress and review scores. It's questions are based on the articles of the Guidelines app. Build on <b>Ionic</b>, <b>Parse</b> and a whole lof of <b>Angular.js.</b> It's supported on <b>iPhone</b> and <b>iPad</b>, has <b>In-app purchases.</b></div>
 			<div class="screenshots screenshots-app scrollbar-macosx">
@@ -482,17 +483,17 @@ table span.gle-next {
 				</div>
 			</div>
 		</div>
-		<div class="project">
+		<div class="project web">
 			<h3><a href="http://photek.fm/" target="_blank">Photek - Record producer, film & TV composer and DJ</a></h3>
 			<span class="link">http://photek.fm/</span>
 			<div class="description">Official site of Photek. Built on <b>Laravel</b>, using <b>HTML/CSS/jQuery</b> and <b>Gulp</b> on a <b>custom</b> CSS framework by Greg...</div>
 		</div>
-		<div class="project">
+		<div class="project web">
 			<h3><a href="http://andyc.cc/" target="_blank">AndyC - Official website</a></h3>
 			<span class="link">http://andyc.cc/</span>
 			<div class="description">Official website of AndyC let's you sign up for his latest new and get the latest info about his "All Night Tour". Build using <b>HTML/CSS/JS</b></div>
 		</div>
-		<div class="project">
+		<div class="project web">
 			<h3><a href="http://www.newtheme.net/" target="_blank">NEW THEME Inc.</a></h3>
 			<span class="link">www.newtheme.net/</span>
 			<div class="description">Realizing the convergence of craft, design and the arts, NEW THEME seeks to redefine the boundaries of the architectural field and of the broader applications ... Built on <b>Joomla 3</b></div>
@@ -502,17 +503,17 @@ table span.gle-next {
 			<span class="link">http://uwwwe.com/clients/grc</span>
 			<div class="description">(Global Rally Cross website build on Wordpress, all the blocks are custom Widgets I coded, I also created a plugin for Races where you can add racers, teams, races stats</div>
 		</div>-->
-		<div class="project">
+		<div class="project web">
 			<h3><a href="http://annikuan.com/" target="_blank">Anni Kuan | New York</a></h3>
 			<span class="link">annikuan.com/</span>
 			<div class="description">New York Times: Chirlane McCray, the Wife of Bill de Blasio, Is a Fan of Anni Kuan. 0 comments. "I LOVE MY DESIGNS," Anni Kuan said the other day, her ...</div>
 		</div>
-		<div class="project">
+		<div class="project web">
 			<h3><a href="http://www.tracy-anderson.de/metamorphosis/survey/" target="_blank">Tracy Anderson: Homepage</a></h3>
 			<span class="link">http://www.tracy-anderson.de/metamorphosis/survey/</span>
 			<div class="description">Built website and integrated custom written survey plugin.</div>
 		</div>
-		<table>
+		<table class="project social web app">
 			<tr>
 				<td><span class="G"></span></td>
 				<td><span class="o active"></span>1</td>
@@ -570,6 +571,15 @@ $(document).ready(function(){
 			closeBtn: false
 		});
 	});
+	$('.projects-block').isotope({
+		itemSelector: '.project',
+	})
+	$('.nav-bar a').click(function(e){
+		e.preventDefault();
+		$('.nav-bar a').removeClass('active');
+		$(this).addClass('active');
+		$('.projects-block').isotope({ filter: $(this).data('filter') })
+	})
 });
 </script>
 </html>
