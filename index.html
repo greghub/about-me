@@ -402,7 +402,7 @@ $(document).ready(function(){
 	});
 });
 $(window).load(function(){
-	$('.projects-block').isotope({
+	$grid = $('.projects-block').isotope({
 		itemSelector: '.project',  
 		hiddenStyle: {
 			opacity: 0
@@ -410,7 +410,10 @@ $(window).load(function(){
 		visibleStyle: {
 			opacity: 1
 		}
-	})
+	});
+	$grid.imagesLoaded().progress( function() {
+		$grid.isotope('layout');
+	});
 	$('.nav-bar a').click(function(e){
 		e.preventDefault();
 		$('.nav-bar a').removeClass('active');
