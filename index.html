@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 <script type="text/javascript" src="plugins/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
 <script type="text/javascript" src="plugins/isotope.pkgd.min.js"></script>
+<script src="plugins/imagesloaded.pkgd.min.js"></script>
 <style type="text/css">
 body {
 	margin: 0;
@@ -292,7 +293,7 @@ a.press:hover {
 	background: rgba(255,255,255,0.7);
 }
 .website-box .fancybox-nav {
-	width: 20%;
+	width: 15%;
 }
 footer {
 	clear: both;
@@ -411,7 +412,7 @@ $(window).load(function(){
 			opacity: 1
 		}
 	});
-	$grid.imagesLoaded().progress( function() {
+	$grid.imagesLoaded().progress(function() {
 		$grid.isotope('layout');
 	});
 	$('.nav-bar a').click(function(e){
@@ -420,6 +421,9 @@ $(window).load(function(){
 		$(this).addClass('active');
 		$('.projects-block').isotope({ filter: $(this).data('filter') })
 	})
+})
+$(window).resize(function(){
+	$('.projects-block').isotope();
 })
 </script>
 </head>
