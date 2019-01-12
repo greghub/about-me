@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Greg Hovanesyan Portfolio - Google Search</title>
+<link href="img/googleg_lodp.ico" rel="shortcut icon">
+<link rel="stylesheet" type="text/css" href="plugins/scrollbar/jquery.scrollbar.css">
+<script type="text/javascript" src="plugins/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="plugins/scrollbar/jquery.scrollbar.min.js"></script>
+<link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="plugins/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="plugins/isotope.pkgd.min.js"></script>
+<script src="plugins/imagesloaded.pkgd.min.js"></script>
+<style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+	font-family: arial, sans-serif;
+	min-width: 1164px;
+}
+* {
+	outline: none;
+	font-family: arial, sans-serif;
+}
+.search-bar {
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #666;
+    border-color: #e5e5e5;
+    height: 60px;
+    box-sizing: border-box;
+    padding: 9px 13px;
+}
+#logo {
+    display: block;
+    height: 37px;
+    overflow: hidden;
+    position: relative;
+    width: 95px;
+    float: left;
+    top: 3px;
+}
+#logo img {
+    border: 0;
+    left: 0;
+    position: absolute;
+    top: -41px;
+}
+.search-input-bar {
+	float: left;
+    width: 638px;
+    margin-left: 18px;
+    height: 40px;
+}
+.search-input {
+    height: 40px;
+    width: 590px;
+    font-size: 16px;
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
+    font-family: arial, sans-serif;
+    padding: 9px;
+    position: relative;
+    top: -12px;
+}
+.search-input:hover {
+	border-color: #b9b9b9;
+	border-top-color: #a0a0a0;
+}
+.search-input:focus {
+	border-color: #4285f4;
+}
+.search-button {
+    background-color: #4285f4;
+    border: none;
+    width: 40px;
+    height: 40px;
+    left: -5px;
+    position: relative;    
+    border-radius: 0px 2px 2px 0;
+}
+.search-button:hover {
+	background-color: #3b78e7;
+	cursor: pointer;
+}
+.search-icon {
+	background: url(img/nav_logo242_hr.png) no-repeat -107px -55px;
+	background-size: 167px 410px;
+    color: transparent;
+    display: inline-block;
+    height: 21px;
+    width: 24px;
+    margin: 7px auto;
+}
+.profile-bar {
+	float: right;
+}
+.profile-name {
+	color: rgba(90,90,90,0.8);
+	font-size: 13px;
+    position: relative;
+    top: -17px;
+}
+a.grid {
+	display: inline-block;
+	background: url(img/i2_2ec824b0.png) no-repeat -132px -38px;
+	background-size: 528px 68px;
+	width: 30px;
+	height: 30px;
+	opacity: 0.55;
+	margin: 6px 15px 6px 11px;
+}
+a.grid:hover {
+	opacity: 1;
+}
+a.notification {
+	display: inline-block;
+	background: url(img/i2_2ec824b0.png) no-repeat -194px -21px;
+	background-size: 528px 68px;
+	background-color: rgba(0,0,0,.55);
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	margin: 11px 0px;
+}
+a.notification:hover {
+	background-color: #222;
+}
+.profile-pic {
+	display: inline-block;
+	height: 32px;
+	width: 32px;
+	background: url(img/photo.jpg) no-repeat;
+	background-size: 32px 32px;
+	border-radius: 50%;
+	margin: 5px 16px 5px 15px;
+}
+.nav-bar {
+	border-bottom: 1px solid #ebebeb;
+	height: 60px;
+	box-sizing: border-box;
+}
+.nav-bar ul {
+    padding: 0;
+    height: 60px;
+    margin: 0 120px;
+}
+.nav-bar li {
+	float: left;
+	list-style-type: none;
+	height: 60px;
+}
+.nav-bar li a {
+	line-height: 56px;
+    display: inline-block;
+    color: rgb(100,100,100);
+    text-decoration: none;
+    font-size: 13px;
+    padding: 0 8px;
+    margin: 0 8px;
+}
+.nav-bar li a:hover {
+	color: #222;
+}
+.nav-bar li a.active {
+    border-bottom: 3px solid #4285f4;
+    color: #4285f4;
+    font-weight: 700;
+}
+.results-count {
+    color: #808080;
+    font-size: 13px;
+    margin-left: 136px;
+    padding: 14px 0;
+}
+.projects-block {
+	float: left;
+	margin-left: 135px;
+	width: 512px;
+}
+.project {
+	margin-bottom: 18px;
+}
+.project h3 {
+	margin-top: 8px;
+    margin-bottom: 0;
+}
+.project h3 a {
+    color: #1a0dab;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 18px;
+}
+.project h3 a:hover {
+	text-decoration: underline;
+}
+.project h3 a:visited {
+	/*color: #609;*/
+}
+.link, a.press, a.press:hover, a.press:active, a.press:focus {
+	font-size: 14px;
+	color: #006621;
+    margin-top: 2px;
+    margin-bottom: 1px;
+    display: inline-block;
+    text-decoration: none;
+}
+.link:after {
+	content: " ";
+    display: table;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #006621;
+    box-sizing: border-box;
+    float: right;
+    margin-top: 6px;
+    margin-left: 6px;
+}
+a.press:hover {
+	text-decoration: underline;
+}
+.description {
+	font-size: 13px;
+	color: #545454;
+    line-height: 18px;
+}
+.profile-block {
+	float: left;
+	width: 454px;
+	box-sizing: border-box;
+	box-shadow: 0px 0px 3px 0px #a5a5a5;
+    margin-left: 40px;
+}
+.profile-block .bio h1 {
+	font-size: 30px;
+	line-height: 37px;
+	font-weight: normal;
+	margin: 0;
+}
+.profile-block img {
+	display: block;
+}
+.profile-block .bio span {
+	color: #777;
+	font-size: 13px;
+	line-height: 16px;
+	margin: 4px 0;
+}
+.profile-block .bio {
+	padding: 12px 15px 15px 15px;
+}
+.profile-block .bio p {
+	font-size: 13px;
+	line-height: 16px;
+}
+.profile-block .bio a {
+	font-size: 13px;
+	line-height: 16px;
+}
+.screenshots {
+	width: 512px;
+}
+.screenshots .scroll-content {
+    padding: 12px 0 !important;
+}
+.screenshots .screen {
+	float: left;
+	max-height: 130px;
+	overflow: hidden;
+	width: 220px;
+}
+.screenshots .screen a {
+	display: inline-block;
+    max-height: 126px;
+    box-shadow: 0 0 5px 1px #e5e5e5;
+    margin: 2px;
+    overflow: hidden;
+}
+.screenshots img {
+	width: 200px;
+	display: block;
+}
+.screenshots-holder:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+.full-size {
+	font-size: 13px;
+	color: #777;
+}
+.fancybox-overlay {
+	background: rgba(255,255,255,0.7);
+}
+.website-box .fancybox-nav {
+	width: 15%;
+}
+footer {
+	clear: both;
+	background: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+    box-sizing: border-box;
+    height: 64px;
+    line-height: 64px;
+    padding-left: 119px;
+}
+footer a {
+	font-size: 13px;
+	padding: 0 16px;
+	text-decoration: none;
+    color: rgb(100,100,100);
+}
+footer a:hover {
+	color: #222;
+}
+table {
+	margin: 0 auto 30px;
+}
+table td {
+	padding: 0;
+	font-size: 12px;
+	text-align: center;
+}
+table td a {
+    display: block;
+    padding-top: 18px;
+	color: #4285f4;
+	text-decoration: none;
+	font-size: 12px;
+}
+table td a:hover {
+	text-decoration: underline;
+}
+table td a.next {
+    text-align: right;
+    margin-bottom: 8px;
+}
+table span {
+	margin-bottom: 8px;
+}
+table span.G {
+	background: url(img/nav_logo242_hr.png) no-repeat;
+    background-position: -24px 0;
+    background-size: 167px;
+    width: 28px;
+    height: 30px;
+    display: block;
+    margin-top: 4px;
+}
+table span.o {
+    background: url(img/nav_logo242_hr.png) no-repeat;
+    background-position: -75px 0;
+    background-size: 167px;
+    width: 18px;
+    height: 30px;
+    display: block;
+}
+table span.o.active {
+	background-position: -54px 0;
+	margin-top: 18px;
+}
+table span.gle-next {
+    background: url(img/nav_logo242_hr.png) no-repeat;
+    background-position: -96px 0;
+    background-size: 167px;
+    width: 79px;
+    height: 37px;
+    margin-top: 7px;
+    display: block;
+    margin-bottom: 0;
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.screenshots-holder').each(function(){
+    	var size = $(this).find('.screen').length
+    	$(this).width(220*size);
+    });
+    $('.scrollbar-macosx').scrollbar();
+	$(".screenshots-app .screen a").fancybox({
+		closeEffect: 'fade',
+		openEffect: 'fade',
+		prevEffect: 'none',
+		nextEffect: 'none',
+		padding: 0,
+		closeBtn: false
+	});
+	$(".screenshots-web .screen a").fancybox({
+		closeEffect: 'fade',
+		openEffect: 'fade',
+		prevEffect: 'none',
+		nextEffect: 'none',
+		padding: 0,
+		closeBtn: false,
+		scrolling: true,
+		type: 'iframe',
+		height: 540,
+		autoSize: false,
+		wrapCSS : 'website-box',
+		beforeShow: function(){
+    		$('iframe').contents().find("head").append($("<style type='text/css'>img{width:100%;cursor:ns-resize;}</style>"));
+		}
+	});
+});
+$(window).load(function(){
+	$grid = $('.projects-block').isotope({
+		itemSelector: '.project',  
+		hiddenStyle: {
+			opacity: 0
+		},
+		visibleStyle: {
+			opacity: 1
+		}
+	});
+	$grid.imagesLoaded().progress(function() {
+		$grid.isotope('layout');
+	});
+	$('.nav-bar a').click(function(e){
+		e.preventDefault();
+		$('.nav-bar a').removeClass('active');
+		$(this).addClass('active');
+		$('.projects-block').isotope({ filter: $(this).data('filter') })
+	})
+})
+$(window).resize(function(){
+	$('.projects-block').isotope();
+})
+</script>
+<script type="text/javascript">
+  window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+  heap.load("3547539843");
+</script>
+</head>
+<body>
+	<div class="search-bar">
+		<a id="logo" href="#">
+			<img width="167" height="410" src="img/nav_logo242_hr.png" alt="Google">
+		</a>
+		<div class="search-input-bar">
+			<input class="search-input" maxlength="2048" aria-expanded="true" autocomplete="off" type="text" value="Greg Hovanesyan" role="combobox" spellcheck="false">
+			<button class="search-button"><span class="search-icon"></span></button>
+		</div>
+		<div class="profile-bar">
+			<span class="profile-name">Gregory</span>
+			<a class="grid" href="#"></a>
+			<a class="notification" href="#"></a>
+			<span class="profile-pic"></span>
+		</div>
+	</div>
+	<div class="nav-bar">
+		<ul>
+			<li><a href="#" class="active" data-filter="*">All</a></li>
+			<li><a href="#" data-filter=".web">Web</a></li>
+			<li><a href="#" data-filter=".app">Apps</a></li>
+			<li><a href="#" data-filter=".social">Social</a></li>
+		</ul>
+	</div>
+	<div class="results-count">About 50 projects (5 years)</div>
+	<div class="projects-block">
+		<div class="project social">
+			<h3><a href="https://www.linkedin.com/in/gregoryhovanesyan" target="_blank">Gregory Hovanesyan | LinkedIn</a></h3>
+			<span class="link">www.linkedin.com/in/gregoryhovanesyan</span>
+			<div class="description">Creative developer at dsire, eli.am, Past: Gigit Inc, UWWWE and others</div>
+		</div>
+		<div class="project social">
+			<h3><a href="http://codepen.io/gregh/" target="_blank">@gregh (Greg Hovanesyan) - CodePen</a></h3>
+			<span class="link">http://codepen.io/gregh/</span>
+			<div class="description">SVG animations using <b>GSAP (GreenSock)</b></div>
+		</div>
+        <div class="project social">
+            <h3><a href="https://github.com/greghub" target="_blank">greghub (Greg Hovanesyan) - GitHub</a></h3>
+            <span class="link">https://github.com/greghub</span>
+            <div class="description">greghub has repositories written in <b>PHP</b>, <b>JavaScript</b>, and <b>CSS</b>. Over 1600 contributions in the last year, of which only 170 are public :) Follow their code on GitHub..</div>
+        </div>
+		<div class="project web">
+			<h3><a href="#">Gigit - Book Live Music: Better. Faster. Smarter.</a></h3>
+			<span class="link">gigit.com/</span>
+			<div class="description">Gigit is a large platform for musicians and event planners. Built on <b>Laravel</b>. Also developed an <b>API</b> for the Gigit Patrons project.</div>
+			<a class="press" href="http://techcrunch.com/2014/07/28/now-sidestage-joins-gigit-in-the-race-to-empower-bands-to-get-gigs/" target="_blank">Techcrunch - http://techcrunch.com/2014/07/28/now-sidestage-joins-gigit...</a>
+			<a class="press" href="http://www.forbes.com/sites/hughmcintyre/2014/09/02/tech-startup-gigit-makes-booking-a-band-a-breeze/#790b0217538f" target="_blank">Forbes - http://www.forbes.com/sites/hughmcintyre/2014/09/02/tech...</a>
+			<a class="press" href="http://www.fastcompany.com/3013540/gigit-turns-your-backyard-into-a-concert-venue" target="_blank">FastCompany - http://www.fastcompany.com/3013540/gigit-turns-your-backyard...</a>
+			<div class="screenshots screenshots-web scrollbar-macosx">
+				<div class="scrollbar-inner screenshots-holder">
+					<div class="screen"><a href="screenshots/gigit-1.jpg" target="_blank" data-fancybox-group="gigit"><img src="screenshots/gigit-1.jpg" alt="Gigit"></a></div>
+					<div class="screen"><a href="screenshots/gigit-2.jpg" target="_blank" data-fancybox-group="gigit"><img src="screenshots/gigit-2.jpg" alt="Gigit"></a></div>
+					<div class="screen"><a href="screenshots/gigit-3.jpg" target="_blank" data-fancybox-group="gigit"><img src="screenshots/gigit-3.jpg" alt="Gigit"></a></div>
+					<div class="screen"><a href="screenshots/gigit-4.jpg" target="_blank" data-fancybox-group="gigit"><img src="screenshots/gigit-4.jpg" alt="Gigit"></a></div>
+				</div>
+			</div>
+			<span class="full-size"><img src="img/zoom_in.png" width="12" alt="Zoom in"> Full size scrollable screenshots</span>
+		</div>
+		<div class="project web">
+			<h3><a href="#">Patrons by Gigit app</a></h3>
+			<span class="link">patron.gigit.com/</span>
+			<div class="description">Patrons is a platform by Gigit which helps promote artists. They can trade a hotel room for an unplugged set, a $100 bar tab in exchange for a DJ set etc. Opportunities are endless. The frontend is developed using <b>React.js</b> and the backend is supported by an <b>API</b> built in <b>Laravel.</b></div>
+			<a class="press" href="http://techcrunch.com/2014/11/22/book_cool_bands_for_the_office/" target="_blank">Techcrunch - http://techcrunch.com/2014/11/22/bo...</a>
+			<a class="press" href="http://www.thefader.com/2014/11/19/patrons-like-airbnb-for-artists-with-free-time-and-lots-instagram-followers" target="_blank">Fader - http://www.thefader.com/2014/11/19/patrons-li...</a>
+			<a class="press" href="https://www.aabacosmallbusiness.com/advisor/post/109608738682/img-width-310-height-185" target="_blank">Aabaco - https://www.aabacosmallbusiness.com/advisor...</a>
+			<div class="screenshots screenshots-web">
+				<div class="scrollbar-inner screenshots-holder">
+					<div class="screen"><a href="screenshots/patrons-1.jpg" target="_blank"><img src="screenshots/patrons-1.jpg" alt="Patron"></a></div>
+				</div>
+			</div>
+			<span class="full-size"><img src="img/zoom_in.png" width="12" alt="Zoom in"> Full size screenshot</span>
+		</div>
+		<div class="project web">
+			<h3><a href="https://eli.am" target="_blank">eli.am - the largest online gift shop in Armenia</a></h3>
+			<span class="link">eli.am/</span>
+			<div class="description">Website is built on <b>Wordpress</b> using <b>Woocommerce</b>. I joined the team and became reponsible for the Front-end and back-end functionality as well as UX design. Completely redesigned and added functionality.</div>
+		</div>
+		<div class="project web">
+			<h3><a href="https://dirtbikekidz.com/" target="_blank">Dirt Bike Kidz DBK Freestyle Motocross Apparel | There is ...</a></h3>
+			<span class="link">https://dirtbikekidz.com/</span>
+			<div class="description">Dirt Bike Kidz DBK is more than a Freestyle Motocross brand, it is a lifestyle that can inspire everyone to live their dream. Built on <b>Wordpress + Woocommerce</b>, updated to the WC2.1. Website had sales of $5000 on the first night</div>
+		</div>
+		<div class="project web">
+			<h3><a href="http://candacecourter.com/map-search/" target="_blank">Candace Courter Map Search Tool</a></h3>
+			<span class="link">http://candacecourter.com/map-search/</span>
+			<div class="description">Written in <b>CodeIgniter</b> and integrated into <b>Wordpress</b>, this is a helpful tool for finding the real estate in your area. Using the toolbox, draw an area on the map <b>(google Maps v3)</b> where you want to perform search, select schools, barc, hospitals etc in that area as well.</div>
+		</div>
+		<div class="project app">
+			<h3><a href="#" target="_blank">Springer - Guidelines App</a></h3>
+			<div class="description">Guidelines is an app for medical students to prepare for tests. It has 20 chapters and about 500 topics for reading. The app categories es the articles. Build on <b>Ionic</b> is supported on <b>iPhone</b> and <b>iPad.</b></div>
+			<div class="screenshots screenshots-app scrollbar-macosx">
+				<div class="scrollbar-inner screenshots-holder">
+					<div class="screen"><a href="screenshots/guide-1-iphone.jpg" data-fancybox-group="guide" target="_blank"><img src="screenshots/guide-1.jpg" alt="Springer Guidelines"></a></div>
+					<div class="screen"><a href="screenshots/guide-2-iphone.jpg" data-fancybox-group="guide" target="_blank"><img src="screenshots/guide-2.jpg" alt="Springer Guidelines"></a></div>
+					<div class="screen"><a href="screenshots/guide-3-iphone.jpg" data-fancybox-group="guide" target="_blank"><img src="screenshots/guide-3.jpg" alt="Springer Guidelines"></a></div>
+					<div class="screen"><a href="screenshots/guide-4-iphone.jpg" data-fancybox-group="guide" target="_blank"><img src="screenshots/guide-4.jpg" alt="Springer Guidelines"></a></div>
+					<div class="screen"><a href="screenshots/guide-5-iphone.jpg" data-fancybox-group="guide" target="_blank"><img src="screenshots/guide-5.jpg" alt="Springer Guidelines"></a></div>
+					<div class="screen"><a href="screenshots/guide-6-iphone.jpg" data-fancybox-group="guide" target="_blank"><img src="screenshots/guide-6.jpg" alt="Springer Guidelines"></a></div>
+					<div class="screen"><a href="screenshots/guide-7-iphone.jpg" data-fancybox-group="guide" target="_blank"><img src="screenshots/guide-7.jpg" alt="Springer Guidelines"></a></div>
+				</div>
+			</div>
+		</div>
+		<div class="project app">
+			<h3><a href="#" target="_blank">Springer - Exam App</a></h3>
+			<div class="description">Exam is an app for medical students to take test, see progress and review scores. It's questions are based on the articles of the Guidelines app. Build on <b>Ionic</b>, <b>Parse</b> and a whole lof of <b>Angular.js.</b> It's supported on <b>iPhone</b> and <b>iPad</b>, has <b>In-app purchases.</b></div>
+			<div class="screenshots screenshots-app scrollbar-macosx">
+				<div class="scrollbar-inner screenshots-holder">
+					<div class="screen"><a href="screenshots/exam-1-iphone.jpg" data-fancybox-group="exam" target="_blank"><img src="screenshots/exam-1.jpg" alt="Springer Exam"></a></div>
+					<div class="screen"><a href="screenshots/exam-2-iphone.jpg" data-fancybox-group="exam" target="_blank"><img src="screenshots/exam-2.jpg" alt="Springer Exam"></a></div>
+					<div class="screen"><a href="screenshots/exam-3-iphone.jpg" data-fancybox-group="exam" target="_blank"><img src="screenshots/exam-3.jpg" alt="Springer Exam"></a></div>
+					<div class="screen"><a href="screenshots/exam-4-iphone.jpg" data-fancybox-group="exam" target="_blank"><img src="screenshots/exam-4.jpg" alt="Springer Exam"></a></div>
+					<div class="screen"><a href="screenshots/exam-5-iphone.jpg" data-fancybox-group="exam" target="_blank"><img src="screenshots/exam-5.jpg" alt="Springer Exam"></a></div>
+					<div class="screen"><a href="screenshots/exam-6-iphone.jpg" data-fancybox-group="exam" target="_blank"><img src="screenshots/exam-6.jpg" alt="Springer Exam"></a></div>
+					<div class="screen"><a href="screenshots/exam-7-iphone.jpg" data-fancybox-group="exam" target="_blank"><img src="screenshots/exam-7.jpg" alt="Springer Exam"></a></div>
+					<div class="screen"><a href="screenshots/exam-8-iphone.jpg" data-fancybox-group="exam" target="_blank"><img src="screenshots/exam-8.jpg" alt="Springer Exam"></a></div>
+					<div class="screen"><a href="screenshots/exam-9-iphone.jpg" data-fancybox-group="exam" target="_blank"><img src="screenshots/exam-9.jpg" alt="Springer Exam"></a></div>
+					<div class="screen"><a href="screenshots/exam-11-ipad.jpg" data-fancybox-group="exam" target="_blank"><img src="screenshots/exam-11.jpg" alt="Springer Exam"></a></div>
+					<div class="screen"><a href="screenshots/exam-12-ipad.jpg" data-fancybox-group="exam" target="_blank"><img src="screenshots/exam-12.jpg" alt="Springer Exam"></a></div>
+					<div class="screen"><a href="screenshots/exam-13-ipad.jpg" data-fancybox-group="exam" target="_blank"><img src="screenshots/exam-13.jpg" alt="Springer Exam"></a></div>
+				</div>
+			</div>
+		</div>
+		<div class="project web">
+			<h3><a href="http://photek.fm/" target="_blank">Photek - Record producer, film & TV composer and DJ</a></h3>
+			<span class="link">http://photek.fm/</span>
+			<div class="description">Official site of Photek. Built on <b>Laravel</b>, using <b>HTML/CSS/jQuery</b> and <b>Gulp</b> on a <b>custom</b> CSS framework by Greg...</div>
+		</div>
+		<div class="project web">
+			<h3><a href="http://andyc.cc/" target="_blank">AndyC - Official website</a></h3>
+			<span class="link">http://andyc.cc/</span>
+			<div class="description">Official website of AndyC let's you sign up for his latest new and get the latest info about his "All Night Tour". Build using <b>HTML/CSS/JS</b></div>
+		</div>
+		<div class="project web">
+			<h3><a href="http://www.newtheme.net/" target="_blank">NEW THEME Inc.</a></h3>
+			<span class="link">www.newtheme.net/</span>
+			<div class="description">Realizing the convergence of craft, design and the arts, NEW THEME seeks to redefine the boundaries of the architectural field and of the broader applications ... Built on <b>Joomla 3</b></div>
+		</div>
+		<!--<div class="project">
+			<h3><a href="#">Global Rally Cross</a></h3>
+			<span class="link">http://uwwwe.com/clients/grc</span>
+			<div class="description">(Global Rally Cross website build on Wordpress, all the blocks are custom Widgets I coded, I also created a plugin for Races where you can add racers, teams, races stats</div>
+		</div>-->
+		<div class="project web">
+			<h3><a href="http://annikuan.com/" target="_blank">Anni Kuan | New York</a></h3>
+			<span class="link">annikuan.com/</span>
+			<div class="description">New York Times: Chirlane McCray, the Wife of Bill de Blasio, Is a Fan of Anni Kuan. 0 comments. "I LOVE MY DESIGNS," Anni Kuan said the other day, her ...</div>
+		</div>
+		<div class="project web">
+			<h3><a href="http://www.tracy-anderson.de/metamorphosis/survey/" target="_blank">Tracy Anderson: Homepage</a></h3>
+			<span class="link">http://www.tracy-anderson.de/metamorphosis/survey/</span>
+			<div class="description">Built website and integrated custom written survey plugin.</div>
+		</div>
+		<table class="project social web app">
+			<tr>
+				<td><span class="G"></span></td>
+				<td><span class="o active"></span>1</td>
+				<td><a href="#"><span class="o"></span>2</a></td>
+				<td><a href="#"><span class="o"></span>3</a></td>
+				<td><a href="#"><span class="o"></span>4</a></td>
+				<td><a href="#"><span class="o"></span>5</a></td>
+				<td><a href="#"><span class="o"></span>6</a></td>
+				<td><a href="#"><span class="o"></span>7</a></td>
+				<td><a href="#"><span class="o"></span>8</a></td>
+				<td><a href="#"><span class="o"></span>9</a></td>
+				<td><a href="#"><span class="o"></span>10</a></td>
+				<td><a href="#" class="next"><span class="gle-next"></span>Next</a></td>
+			</tr>
+		</table>
+	</div>
+	<div class="profile-block">
+		<img src="img/greg.jpg" alt="Greg">
+		<div class="bio">	
+			<h1>Greg Hovanesyan</h1>
+			<span>Full stack web developer</span>
+			<p>Greg Hovanesyan is a web developer with 5 years of experience in website developement. Passionate about Laravel, API development and UX design. Has background in Computer Science and Mathematics.</p>
+			<p><b>Education:</b> Applied Mathematics and Informatics @ RAU</p>
+			<p><b>PHP:</b> OOP, PDO, RESTful API development</p>
+			<p><b>PHP frameworks:</b> Laravel, CodeIgniter, Yii</p>
+			<p><b>WordPress:</b> WooCommerce, plugin development, theme development</p>
+			<p><b>Databases:</b> MySQL, SQLite</p>
+			<p><b>HTML5/CSS3:</b> Bootstrap 3, Foundation, Less, Sass, Semantic Templates, W3C Valid</p>
+			<p><b>JavaScript:</b> ES6, Vue.js, jQuery, Angular.js, GreenSock, Handlebars.js, ScrollMagic, Grunt, Gulp</p>
+
+			<span>Need code samples? Download the PSD+HTML of one of my projects and review the code!</span><br>
+			<a href="greg_sample.zip">Code Samples</a>
+		</div>
+	</div>
+	<footer>
+		<a href="mailto:greg.hovanesyan@gmail.com">Email me</a>
+		<a href="mailto:greg.hovanesyan@gmail.com?subject=Design+Development">Request design+development</a>
+		<a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fgreghub.github.io%2Fabout-me%2F" target="_blank">See W3C Validator results</a>
+	</footer>
+</body>
+</html>
