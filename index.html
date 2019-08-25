@@ -366,66 +366,6 @@ table span.gle-next {
     margin-bottom: 0;
 }
 </style>
-<script type="text/javascript">
-$(document).ready(function(){
-    $('.screenshots-holder').each(function(){
-    	var size = $(this).find('.screen').length
-    	$(this).width(220*size);
-    });
-    $('.scrollbar-macosx').scrollbar();
-	$(".screenshots-app .screen a").fancybox({
-		closeEffect: 'fade',
-		openEffect: 'fade',
-		prevEffect: 'none',
-		nextEffect: 'none',
-		padding: 0,
-		closeBtn: false
-	});
-	$(".screenshots-web .screen a").fancybox({
-		closeEffect: 'fade',
-		openEffect: 'fade',
-		prevEffect: 'none',
-		nextEffect: 'none',
-		padding: 0,
-		closeBtn: false,
-		scrolling: true,
-		type: 'iframe',
-		height: 540,
-		autoSize: false,
-		wrapCSS : 'website-box',
-		beforeShow: function(){
-    		$('iframe').contents().find("head").append($("<style type='text/css'>img{width:100%;cursor:ns-resize;}</style>"));
-		}
-	});
-});
-$(window).load(function(){
-	$grid = $('.projects-block').isotope({
-		itemSelector: '.project',
-		hiddenStyle: {
-			opacity: 0
-		},
-		visibleStyle: {
-			opacity: 1
-		}
-	});
-	$grid.imagesLoaded().progress(function() {
-		$grid.isotope('layout');
-	});
-	$('.nav-bar a').click(function(e){
-		e.preventDefault();
-		$('.nav-bar a').removeClass('active');
-		$(this).addClass('active');
-		$('.projects-block').isotope({ filter: $(this).data('filter') })
-	})
-})
-$(window).resize(function(){
-	$('.projects-block').isotope();
-})
-</script>
-<script type="text/javascript">
-  window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
-  heap.load("3547539843");
-</script>
 </head>
 <body>
 	<div class="search-bar">
@@ -447,7 +387,6 @@ $(window).resize(function(){
 		<ul>
 			<li><a href="#" class="active" data-filter="*">All</a></li>
 			<li><a href="#" data-filter=".web">Web</a></li>
-			<li><a href="#" data-filter=".app">Apps</a></li>
 			<li><a href="#" data-filter=".social">Social</a></li>
 			<li><a href="#" data-filter=".article">Articles</a></li>
 		</ul>
@@ -467,7 +406,7 @@ $(window).resize(function(){
         <div class="project social">
             <h3><a href="https://github.com/greghub" target="_blank">greghub (Greg Hovanesyan) - GitHub</a></h3>
             <span class="link">https://github.com/greghub</span>
-            <div class="description">greghub has repositories written in <b>PHP</b>, <b>JavaScript</b>, and <b>CSS</b>. Over 1600 contributions in the last year, of which only 170 are public :) Follow their code on GitHub.</div>
+            <div class="description">greghub has repositories written in <b>PHP</b>, <b>JavaScript</b>, and <b>CSS</b>. 596 contributions in the last year. Follow their code on GitHub.</div>
         </div>
 		<div class="project article">
 			<h3><a href="https://css-tricks.com/author/greghvns/" target="_blank">Greg Hovanesyan - Articles on CSS-Tricks</a></h3>
@@ -482,118 +421,27 @@ $(window).resize(function(){
 		<div class="project web">
 			<h3><a href="https://maine.com/" target="_blank">Maine Hotels, Restaurants, &amp; Things to Do — Maine.com</a></h3>
 			<span class="link">maine.com/</span>
-			<div class="description">Tourist guide for the state of Maine, built using Laravel, HTML, CSS, Javascript, Google Maps API, Cloudflare.</div>
+			<div class="description">
+				Tourist guide for the state of Maine, built using Laravel, HTML, CSS, Javascript, Google Maps API, Cloudflare.
+				<ul>
+					<li>Worked closely with the designer on creating the product, design, interaction, user experience from a concept. Lead communication with the client.</li>
+					<li>Optimized performance of the webpage by lazy loading images, serving them at the correct size, re-writing scripts in vanilla JavaScript, using best practices which made the initial loading time to only 1 second, 98% desktop, 92% mobile.</li>
+					<li>SEO: 1000 keywords ranking in the first week</li>
+				</ul>
+			</div>
 		</div>
 		<div class="project web">
 			<h3><a href="https://getlooma.com/" target="_blank">Looma - Money automation app</a></h3>
 			<span class="link">getlooma.com/</span>
-			<div class="description">SPA features custom animations, custom developed CSS framework, responsive design.</div>
-		</div>
-		<div class="project web">
-			<h3><a href="#">Gigit - Book Live Music: Better. Faster. Smarter.</a></h3>
-			<span class="link">gigit.com/</span>
-			<div class="description">Gigit is a large platform for musicians and event planners. Built on <b>Laravel</b>. Also developed an <b>API</b> for the Gigit Patrons project.</div>
-			<a class="press" href="http://techcrunch.com/2014/07/28/now-sidestage-joins-gigit-in-the-race-to-empower-bands-to-get-gigs/" target="_blank">Techcrunch - http://techcrunch.com/2014/07/28/now-sidestage-joins-gigit...</a>
-			<a class="press" href="http://www.forbes.com/sites/hughmcintyre/2014/09/02/tech-startup-gigit-makes-booking-a-band-a-breeze/#790b0217538f" target="_blank">Forbes - http://www.forbes.com/sites/hughmcintyre/2014/09/02/tech...</a>
-			<a class="press" href="http://www.fastcompany.com/3013540/gigit-turns-your-backyard-into-a-concert-venue" target="_blank">FastCompany - http://www.fastcompany.com/3013540/gigit-turns-your-backyard...</a>
-			<div class="screenshots screenshots-web scrollbar-macosx">
-				<div class="scrollbar-inner screenshots-holder">
-					<div class="screen"><a href="screenshots/gigit-1.jpg" target="_blank" data-fancybox-group="gigit"><img src="screenshots/gigit-1.jpg" alt="Gigit"></a></div>
-					<div class="screen"><a href="screenshots/gigit-2.jpg" target="_blank" data-fancybox-group="gigit"><img src="screenshots/gigit-2.jpg" alt="Gigit"></a></div>
-					<div class="screen"><a href="screenshots/gigit-3.jpg" target="_blank" data-fancybox-group="gigit"><img src="screenshots/gigit-3.jpg" alt="Gigit"></a></div>
-					<div class="screen"><a href="screenshots/gigit-4.jpg" target="_blank" data-fancybox-group="gigit"><img src="screenshots/gigit-4.jpg" alt="Gigit"></a></div>
-				</div>
+			<div class="description">
+				Landing page for a money automation app that helps you invest, save and donate automatically.
+				<ul>
+					<li>Javascript animations using GSAP</li>
+					<li>SVG Optimization</li>
+					<li>Custom CSS utility-based framework</li>
+					<li>Enhanced experience for mobile</li>
+				</ul>
 			</div>
-			<span class="full-size"><img src="img/zoom_in.png" width="12" alt="Zoom in"> Full size scrollable screenshots</span>
-		</div>
-		<div class="project web">
-			<h3><a href="#">Patrons by Gigit app</a></h3>
-			<span class="link">patron.gigit.com/</span>
-			<div class="description">Patrons is a platform by Gigit which helps promote artists. They can trade a hotel room for an unplugged set, a $100 bar tab in exchange for a DJ set etc. Opportunities are endless. The frontend is developed using <b>React.js</b> and the backend is supported by an <b>API</b> built in <b>Laravel.</b></div>
-			<a class="press" href="http://techcrunch.com/2014/11/22/book_cool_bands_for_the_office/" target="_blank">Techcrunch - http://techcrunch.com/2014/11/22/bo...</a>
-			<a class="press" href="http://www.thefader.com/2014/11/19/patrons-like-airbnb-for-artists-with-free-time-and-lots-instagram-followers" target="_blank">Fader - http://www.thefader.com/2014/11/19/patrons-li...</a>
-			<a class="press" href="https://www.aabacosmallbusiness.com/advisor/post/109608738682/img-width-310-height-185" target="_blank">Aabaco - https://www.aabacosmallbusiness.com/advisor...</a>
-			<div class="screenshots screenshots-web">
-				<div class="scrollbar-inner screenshots-holder">
-					<div class="screen"><a href="screenshots/patrons-1.jpg" target="_blank"><img src="screenshots/patrons-1.jpg" alt="Patron"></a></div>
-				</div>
-			</div>
-			<span class="full-size"><img src="img/zoom_in.png" width="12" alt="Zoom in"> Full size screenshot</span>
-		</div>
-		<div class="project web">
-			<h3><a href="https://eli.am" target="_blank">eli.am - the largest online gift shop in Armenia</a></h3>
-			<span class="link">eli.am/</span>
-			<div class="description">Website is built on <b>Wordpress</b> using <b>Woocommerce</b>. I joined the team and became reponsible for the Front-end and back-end functionality as well as UX design. Completely redesigned and added functionality.</div>
-		</div>
-		<div class="project web">
-			<h3><a href="https://dirtbikekidz.com/" target="_blank">Dirt Bike Kidz DBK Freestyle Motocross Apparel | There is ...</a></h3>
-			<span class="link">https://dirtbikekidz.com/</span>
-			<div class="description">Dirt Bike Kidz DBK is more than a Freestyle Motocross brand, it is a lifestyle that can inspire everyone to live their dream. Built on <b>Wordpress + Woocommerce</b>, updated to the WC2.1. Website had sales of $5000 on the first night</div>
-		</div>
-		<div class="project web">
-			<h3><a href="http://candacecourter.com/map-search/" target="_blank">Candace Courter Map Search Tool</a></h3>
-			<span class="link">http://candacecourter.com/map-search/</span>
-			<div class="description">Written in <b>CodeIgniter</b> and integrated into <b>Wordpress</b>, this is a helpful tool for finding the real estate in your area. Using the toolbox, draw an area on the map <b>(google Maps v3)</b> where you want to perform search, select schools, barc, hospitals etc in that area as well.</div>
-		</div>
-		<div class="project app">
-			<h3><a href="#" target="_blank">Springer - Guidelines App</a></h3>
-			<div class="description">Guidelines is an app for medical students to prepare for tests. It has 20 chapters and about 500 topics for reading. The app categories es the articles. Build on <b>Ionic</b> is supported on <b>iPhone</b> and <b>iPad.</b></div>
-			<div class="screenshots screenshots-app scrollbar-macosx">
-				<div class="scrollbar-inner screenshots-holder">
-					<div class="screen"><a href="screenshots/guide-1-iphone.jpg" data-fancybox-group="guide" target="_blank"><img src="screenshots/guide-1.jpg" alt="Springer Guidelines"></a></div>
-					<div class="screen"><a href="screenshots/guide-2-iphone.jpg" data-fancybox-group="guide" target="_blank"><img src="screenshots/guide-2.jpg" alt="Springer Guidelines"></a></div>
-					<div class="screen"><a href="screenshots/guide-3-iphone.jpg" data-fancybox-group="guide" target="_blank"><img src="screenshots/guide-3.jpg" alt="Springer Guidelines"></a></div>
-					<div class="screen"><a href="screenshots/guide-4-iphone.jpg" data-fancybox-group="guide" target="_blank"><img src="screenshots/guide-4.jpg" alt="Springer Guidelines"></a></div>
-					<div class="screen"><a href="screenshots/guide-5-iphone.jpg" data-fancybox-group="guide" target="_blank"><img src="screenshots/guide-5.jpg" alt="Springer Guidelines"></a></div>
-					<div class="screen"><a href="screenshots/guide-6-iphone.jpg" data-fancybox-group="guide" target="_blank"><img src="screenshots/guide-6.jpg" alt="Springer Guidelines"></a></div>
-					<div class="screen"><a href="screenshots/guide-7-iphone.jpg" data-fancybox-group="guide" target="_blank"><img src="screenshots/guide-7.jpg" alt="Springer Guidelines"></a></div>
-				</div>
-			</div>
-		</div>
-		<div class="project app">
-			<h3><a href="#" target="_blank">Springer - Exam App</a></h3>
-			<div class="description">Exam is an app for medical students to take test, see progress and review scores. It's questions are based on the articles of the Guidelines app. Build on <b>Ionic</b>, <b>Parse</b> and a whole lof of <b>Angular.js.</b> It's supported on <b>iPhone</b> and <b>iPad</b>, has <b>In-app purchases.</b></div>
-			<div class="screenshots screenshots-app scrollbar-macosx">
-				<div class="scrollbar-inner screenshots-holder">
-					<div class="screen"><a href="screenshots/exam-1-iphone.jpg" data-fancybox-group="exam" target="_blank"><img src="screenshots/exam-1.jpg" alt="Springer Exam"></a></div>
-					<div class="screen"><a href="screenshots/exam-2-iphone.jpg" data-fancybox-group="exam" target="_blank"><img src="screenshots/exam-2.jpg" alt="Springer Exam"></a></div>
-					<div class="screen"><a href="screenshots/exam-3-iphone.jpg" data-fancybox-group="exam" target="_blank"><img src="screenshots/exam-3.jpg" alt="Springer Exam"></a></div>
-					<div class="screen"><a href="screenshots/exam-4-iphone.jpg" data-fancybox-group="exam" target="_blank"><img src="screenshots/exam-4.jpg" alt="Springer Exam"></a></div>
-					<div class="screen"><a href="screenshots/exam-5-iphone.jpg" data-fancybox-group="exam" target="_blank"><img src="screenshots/exam-5.jpg" alt="Springer Exam"></a></div>
-					<div class="screen"><a href="screenshots/exam-6-iphone.jpg" data-fancybox-group="exam" target="_blank"><img src="screenshots/exam-6.jpg" alt="Springer Exam"></a></div>
-					<div class="screen"><a href="screenshots/exam-7-iphone.jpg" data-fancybox-group="exam" target="_blank"><img src="screenshots/exam-7.jpg" alt="Springer Exam"></a></div>
-					<div class="screen"><a href="screenshots/exam-8-iphone.jpg" data-fancybox-group="exam" target="_blank"><img src="screenshots/exam-8.jpg" alt="Springer Exam"></a></div>
-					<div class="screen"><a href="screenshots/exam-9-iphone.jpg" data-fancybox-group="exam" target="_blank"><img src="screenshots/exam-9.jpg" alt="Springer Exam"></a></div>
-					<div class="screen"><a href="screenshots/exam-11-ipad.jpg" data-fancybox-group="exam" target="_blank"><img src="screenshots/exam-11.jpg" alt="Springer Exam"></a></div>
-					<div class="screen"><a href="screenshots/exam-12-ipad.jpg" data-fancybox-group="exam" target="_blank"><img src="screenshots/exam-12.jpg" alt="Springer Exam"></a></div>
-					<div class="screen"><a href="screenshots/exam-13-ipad.jpg" data-fancybox-group="exam" target="_blank"><img src="screenshots/exam-13.jpg" alt="Springer Exam"></a></div>
-				</div>
-			</div>
-		</div>
-		<div class="project web">
-			<h3><a href="http://photek.fm/" target="_blank">Photek - Record producer, film & TV composer and DJ</a></h3>
-			<span class="link">http://photek.fm/</span>
-			<div class="description">Official site of Photek. Built on <b>Laravel</b>, using <b>HTML/CSS/jQuery</b> and <b>Gulp</b> on a <b>custom</b> CSS framework by Greg...</div>
-		</div>
-		<div class="project web">
-			<h3><a href="http://andyc.cc/" target="_blank">AndyC - Official website</a></h3>
-			<span class="link">http://andyc.cc/</span>
-			<div class="description">Official website of AndyC let's you sign up for his latest new and get the latest info about his "All Night Tour". Build using <b>HTML/CSS/JS</b></div>
-		</div>
-		<div class="project web">
-			<h3><a href="http://www.newtheme.net/" target="_blank">NEW THEME Inc.</a></h3>
-			<span class="link">www.newtheme.net/</span>
-			<div class="description">Realizing the convergence of craft, design and the arts, NEW THEME seeks to redefine the boundaries of the architectural field and of the broader applications ... Built on <b>Joomla 3</b></div>
-		</div>
-		<div class="project web">
-			<h3><a href="http://annikuan.com/" target="_blank">Anni Kuan | New York</a></h3>
-			<span class="link">annikuan.com/</span>
-			<div class="description">New York Times: Chirlane McCray, the Wife of Bill de Blasio, Is a Fan of Anni Kuan. 0 comments. "I LOVE MY DESIGNS," Anni Kuan said the other day, her ...</div>
-		</div>
-		<div class="project web">
-			<h3><a href="http://www.tracy-anderson.de/metamorphosis/survey/" target="_blank">Tracy Anderson: Homepage</a></h3>
-			<span class="link">http://www.tracy-anderson.de/metamorphosis/survey/</span>
-			<div class="description">Built website and integrated custom written survey plugin.</div>
 		</div>
 		<table class="project social web app article">
 			<tr>
@@ -618,7 +466,7 @@ $(window).resize(function(){
 			<h1>Greg Hovanesyan</h1>
 			<span>Full Stack Web Developer</span>
 			<p>Greg Hovanesyan is a web developer with 7 years of experience in app development. Passionate about building products, design and technology. Has background in Computer Science and Mathematics.</p>
-			<p><b>Current Employment:</b> Web Developer, R&D Team @ <a href="https://www.namecheap.com/" target="_blank">Namecheap.com</a></p>
+			<p><b>Previous Employment:</b> Web Developer, R&D Team @ <a href="https://www.namecheap.com/" target="_blank">Namecheap.com</a></p>
 			<p><b>Education:</b> Bachelor's - Applied Mathematics and Informatics @ RAU</p>
 			<p><b>PHP:</b> Laravel, OOP, RESTful API development, Design Patterns</p>
 			<p><b>Node.js:</b> Express</p>
@@ -639,5 +487,61 @@ $(window).resize(function(){
 	<script src="plugins/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
 	<script src="plugins/isotope.pkgd.min.js"></script>
 	<script src="plugins/imagesloaded.pkgd.min.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function(){
+            $('.screenshots-holder').each(function(){
+                var size = $(this).find('.screen').length
+                $(this).width(220*size);
+            });
+            $('.scrollbar-macosx').scrollbar();
+            $(".screenshots-app .screen a").fancybox({
+                closeEffect: 'fade',
+                openEffect: 'fade',
+                prevEffect: 'none',
+                nextEffect: 'none',
+                padding: 0,
+                closeBtn: false
+            });
+            $(".screenshots-web .screen a").fancybox({
+                closeEffect: 'fade',
+                openEffect: 'fade',
+                prevEffect: 'none',
+                nextEffect: 'none',
+                padding: 0,
+                closeBtn: false,
+                scrolling: true,
+                type: 'iframe',
+                height: 540,
+                autoSize: false,
+                wrapCSS : 'website-box',
+                beforeShow: function(){
+                    $('iframe').contents().find("head").append($("<style type='text/css'>img{width:100%;cursor:ns-resize;}</style>"));
+                }
+            });
+        });
+        $(window).load(function(){
+            $grid = $('.projects-block').isotope({
+                itemSelector: '.project',
+                hiddenStyle: {
+                    opacity: 0
+                },
+                visibleStyle: {
+                    opacity: 1
+                }
+            });
+            $grid.imagesLoaded().progress(function() {
+                $grid.isotope('layout');
+            });
+            $('.nav-bar a').click(function(e){
+                e.preventDefault();
+                $('.nav-bar a').removeClass('active');
+                $(this).addClass('active');
+                $('.projects-block').isotope({ filter: $(this).data('filter') })
+            })
+        });
+        $(window).resize(function(){
+            $('.projects-block').isotope();
+        })
+	</script>
 </body>
 </html>
